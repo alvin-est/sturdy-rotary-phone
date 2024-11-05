@@ -11,7 +11,10 @@ An API for a social network web application where users can share their thoughts
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
-TBD
+This application uses the NodeJS runtime environment. Make sure you have this installed. This is also using MongoDB for the database. Please install on your workstation before running.
+1. Clone the repo on your localhost or remote server.
+2. Navigate into the folder
+3. 
 ## Usage
 TBD
 ## License
