@@ -24,7 +24,7 @@ If running locally, it should look like the below:
 - *npm install*
 - *npm start*
 
-The server should now be listening (default port 3001).
+The server should now be running (by default listening on port 3001).
 
 ## Usage
 The following API endpoints and their functionalities are listed below:
