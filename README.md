@@ -60,6 +60,6 @@ You will need a tool such as [Insomnia](https://insomnia.rest) (or curl for CLI)
 ## Contributors
 [@alvin-est](https://github.com/@alvin-est)
 ## Tests
-N/A
+None yet.
 ## Questions
 If you have any questions, please contact me at [contact@alvin-the.dev](mailto:contact@alvin-the.dev). You can also find me on GitHub at [@alvin-est](https://github.com/@alvin-est).  
