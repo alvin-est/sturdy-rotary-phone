@@ -55,7 +55,7 @@ You will need a tool such as [Insomnia](https://insomnia.rest) (or curl for CLI)
 ## License
       This project is licensed under the MIT license.
 ## Screenshots
-![Screenshot1](./misc/screenshot.png)
+![Screenshot1](./misc/screenshot1.png)
 ![Screenshot2](./misc/screenshot2.png)
 ## Contributors
 [@alvin-est](https://github.com/@alvin-est)
