@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const dateFormat = require('../utils/dateFormat');
 
 const reactionSchema = new Schema({
     reactionId: {
@@ -23,6 +24,7 @@ const reactionSchema = new Schema({
 },
 {
     toJSON: {
+        virtuals: true,
         getters: true
     },
 });

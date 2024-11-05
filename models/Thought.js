@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const reactionSchema = require('./Reaction');
+const dateFormat = require('../utils/dateFormat');
+const User = require('./User');
 
 const ThoughtSchema = new Schema({
     thoughtText: {
@@ -18,6 +20,12 @@ const ThoughtSchema = new Schema({
         type: String,
         required: true
     },
+    userId: { 
+        // link thought with the user
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
     reactions: [reactionSchema]
 },
 {
@@ -32,4 +40,33 @@ ThoughtSchema.virtual('reactionCount').get(function() {
     return this.reactions.length;
 });
 
-module.exports = mongoose.model('Thought', ThoughtSchema);
+// Pre-save hook to add thought to user's thoughts array automatically
+ThoughtSchema.pre('save', async function(next) {
+    if (this.isNew) {
+        try {
+            await User.findByIdAndUpdate(
+                this.userId,
+                { $push: { thoughts: this._id } }
+            );
+        } catch (error) {
+            // Log error if failed
+            console.error('Failed to add thought to user:', error);
+        }
+    }
+    next();
+});
+
+// Post middleware for when a Thought is deleted
+ThoughtSchema.post('findOneAndDelete', async function(doc) {
+    if (doc) {
+        await User.findByIdAndUpdate(
+            doc.userId,
+            { $pull: { thoughts: doc._id } }
+        );
+    }
+});
+
+
+const Thought = mongoose.model('Thought', ThoughtSchema);
+
+module.exports = Thought;
