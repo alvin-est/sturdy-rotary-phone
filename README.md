@@ -13,11 +13,19 @@ An API for a social network web application where users can share their thoughts
 ## Installation
 This application uses the NodeJS runtime environment. Make sure you have this installed. This is also using MongoDB for the database. Please install on your workstation before running.
 1. Clone the repo on your localhost or remote server.
-2. Navigate into the folder using Terminal
-3. Run the command:
+
+2. Navigate into the server folder using Terminal
+
+3. Edit the .env.template file to add your MongoDB URI and rename this to .env  
+If running locally, it should look like the below:
+`MONGODB_URI=mongodb://localhost/[your_db_name]`
+
+4. Run the commands:
+- *npm install*
 - *npm start*
 
 The server should now be listening (default port 3001).
+
 ## Usage
 The following API endpoints and their functionalities are listed below:
 
@@ -50,7 +58,7 @@ You will need a tool such as [Insomnia](https://insomnia.rest) (or curl for CLI)
 ![Screenshot1](./misc/screenshot.png)
 ![Screenshot2](./misc/screenshot2.png)
 ## Contributors
-@alvin-est
+[@alvin-est](https://github.com/@alvin-est)
 ## Tests
 N/A
 ## Questions
