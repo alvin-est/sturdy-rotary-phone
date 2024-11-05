@@ -1,7 +1,7 @@
 # NoSQL: Social Network API
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
-An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list
+An API for a social networking web application where users can share their thoughts, react to friends’ thoughts, and create a friend list
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
